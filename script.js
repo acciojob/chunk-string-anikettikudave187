@@ -1,5 +1,8 @@
 function stringChop(str, size) {
-	if(str==null || typeof str!='String')return [];
+	if(str==null || typeof str!='string')return [];
+
+	size=parseInt(size,10);
+	if(isNAN(size) || size<=0)return [];
 
 	const result=[];
 	for (let i = 0; i < str.length; i+=size) {
